@@ -29,7 +29,7 @@ class calculatorController extends Controller
       $hasil = 0;
     }
     
-    return redirect('/')->with('info', 'Hasilnya ' . $hasil);
+    return redirect('/')->with('jawab', 'Hasilnya dari ' . $ang1 . $opt . $ang2 . ' adalah ' . $hasil);
 
   }
 }

@@ -17,11 +17,11 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="my-input">Angka ke-1</label>
-                  <input class="form-control" type="number" name="ke1" required>
+                  <input class="form-control" type="number" name="ke1" >
                 </div>
                 <div class="form-group col-md-6">
                   <label for="my-input">Angka ke-2</label>
-                  <input class="form-control" type="number" name="ke2" required>
+                  <input class="form-control" type="number" name="ke2" >
                 </div>
               </div>
               <div class="form-row">
@@ -38,11 +38,11 @@
             </div>
           </div>
         </form>
-        <div class="row justify-content-center my-2">
-          <div class="col-md-6">
-            @if(session('info'))
+        <div class="row justify-content-center mt-2">
+          <div class="col-md-8">
+            @if(session('jawab'))
               <div class="alert alert-info">
-                {{ session('info')}}
+                {{ session('jawab')}}
               </div>
             @endif
           </div>
