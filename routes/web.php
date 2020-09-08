@@ -9,5 +9,5 @@ Route::get('/', function () {
 // Route::get('/forms', 'formController@index');
 // Route::post('/proses', 'formController@proses');
 
-Route::post('hasil', 'calculatorController@index');
+Route::post('jawab', 'calculatorController@index');
 // Route::post('hasil', 'calculatorController@hasil');

@@ -10,7 +10,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-6">
-        <form action="hasil" method="post">
+        <form action="jawab" method="post">
         @csrf
           <div class="card mt-5">
             <div class="card-body">
