@@ -7,29 +7,34 @@ use Illuminate\Http\Request;
 class calculatorController extends Controller
 {
 
-  // public function index() {
-  //   return view('calculator');
-  // }
-
-  public function index(Request $request) {
-    $opt = $request->input('operasi');
-    $ang1 = $request->input('ke1');
-    $ang2 = $request->input('ke2');
-    $hasil = 0;
-
-    if ($opt == 'tambah') {
-      $hasil = $ang1 + $ang2;
-    }elseif ($opt == 'kurang') {
-     $hasil = $ang1 - $ang2; 
-    }elseif ($opt == 'kali') {
-      $hasil = $ang1 * $ang2;
-    }elseif ($opt) {
-      $hasil = $ang1 / $ang2;
-    }else {
-      $hasil = 0;
-    }
+  public function tabung(Request $request) {
+    $alas = $request->input('alas');
+    $tinggi = $request->input('tinggi');
+    $result = 0;
     
-    return redirect('/')->with('jawab', 'Hasilnya dari ' . $ang1 . $opt . $ang2 . ' adalah ' . $hasil);
+    $result= $alas * $tinggi;        
+    
+    return redirect('')->with('jtabung','Volume Tabung adalah: ' . $result);       
+  }
 
+  public function bola(Request $request) {
+    $jari = $request->input('jari');       
+    $phi = 3.14;
+    $result = 0;
+
+    $result = 4/3 * $phi * $jari * $jari * $jari;
+    
+    return redirect('')->with('jbola','Volume Bola adalah: ' . $result);       
+  }
+
+  public function kerucut(Request $request) {
+    $phi = 3.14;
+    $jari = $request->input('jari');
+    $tinggi = $request->input('tinggi');
+    $result = 0;
+
+    $result = 1/3 * $phi * $jari * $jari * $tinggi;
+
+    return redirect('')->with('jkerucut','Volume Kerucut adalah: ' . $result);
   }
 }
