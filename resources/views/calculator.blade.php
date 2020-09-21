@@ -8,55 +8,53 @@
 </head>
 <body>
   <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Hitung 
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tabungBackdrop">
+                    <option value="tabung">Volume Tabung</option>
+                  </button>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item">
+                  <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#bolaBackdrop" value="bola">
+                    <option value="bola">Volume Bola</option>
+                  </button>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item">
+                  <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#kerucutBackdrop" value="kerucut">
+                    <option value="kerucut">Volume Kerucut</option>
+                  </button>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+      </nav>
     <div class="row">
-      <div class="col-5">
-        <div class="card text-center mt-5">
+      <div class="col-12">
+        <div class="card mt-5">
           <div class="card-body">
             <div class="form-row">
-              <!-- <form action="volume" method="POST">
-                @csrf -->
-                <div class="input-group mb-3 justify-content-center">
-                  <div class="input-group-prepend">
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hitung volume</button>
-                    <div class="dropdown-menu text-center">
-                      <div class="row">
-                        <div class="col">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tabungBackdrop">
-                            <option value="tabung">Volume Tabung</option>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#bolaBackdrop" value="bola">
-                            <option value="bola">Volume Bola</option>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#kerucutBackdrop" value="kerucut">
-                            <option value="kerucut">Volume Kerucut</option>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <div class="form-row">
-                  <div class="form-group col-md-2">
-                    <select name="vol" class="form-control">
-                      <option value="tabung"> + </option>
-                      <option value="bola"> - </option>
-                      <option value="kerucut"> x </option>
-                    </select>
-                  </div>
-                </div> -->
-              <!-- <form> -->
+              
             <div>
           </div>
         </div>
-        <div class="row justify-content-center mt-2">
+        <div class="row justify-content-center">
           <div class="col-md-8">
             @if(session('jtabung'))
               <div class="alert alert-info">
